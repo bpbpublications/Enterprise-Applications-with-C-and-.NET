@@ -1,0 +1,82 @@
+﻿@page "/BookingList"
+@using BookingService.Shared
+@using Newtonsoft.Json
+@inject HttpClient Http
+
+
+<PageTitle>Booking List</PageTitle>
+
+<h1>Bookings</h1>
+<br />
+<div style="position:absolute">
+    <a href="/BookingForm/" class="btn btn-primary">Mew Booking</a>
+</div>
+<br /><br />
+
+@if (bookings == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Customer</th>
+                <th>Embark Date</th>
+                <th>Arrival Date</th>
+                <th>Port Origin</th>
+                <th>Country Origin</th>
+                <th>Flag</th>
+                <th>Port Destiny</th>
+                <th>Country Destiny</th>
+                <th>Flag</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var booking in bookings)
+            {
+                <tr>
+                    <td>@booking.Customer</td>
+                    <td>@booking.EmbarkDate.ToShortDateString()</td>
+                    <td>@booking.ArrivalDate.ToShortDateString()</td>
+                    <td>@booking.PortOrigin.Name</td>
+                    <td>
+                        
+                        @booking.PortOrigin.Country.Name
+
+                    </td>
+                    <td>
+                          <span class="fi fi-@booking.PortOrigin.Country.Initials.ToLower()"></span>
+
+                    </td>
+                    <td>@booking.PortDestiny.Name</td>
+                    <td>
+                        
+                        @booking.PortDestiny.Country.Name
+
+                    </td>
+                    <td>
+                          <span class="fi fi-@booking.PortDestiny.Country.Initials.ToLower()"></span>
+
+                    </td>
+                    <td>
+                        <a href="/BookingForm/@booking.Id">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Booking>? bookings;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var result = await Http.GetAsync("/BookingInfo/GetList");
+        var stringResult = await result.Content.ReadAsStringAsync();
+        bookings = JsonConvert.DeserializeObject<List<Booking>>(stringResult);  
+    }
+}

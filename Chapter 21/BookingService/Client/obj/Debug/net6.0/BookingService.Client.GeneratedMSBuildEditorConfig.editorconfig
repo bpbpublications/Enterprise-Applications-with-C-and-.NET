@@ -1,0 +1,89 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = BookingService.Client
+build_property.RootNamespace = BookingService.Client
+build_property.ProjectDir = C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter21\BookingService\Client\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter21\BookingService\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Alexandre Malavasi/source/repos/Building-Enterprise-Applications-With-DotNet-And-CSharp/Chapter21/BookingService/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alexandre Malavasi/source/repos/Building-Enterprise-Applications-With-DotNet-And-CSharp/Chapter21/BookingService/Client/Pages/BookingForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ0Zvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alexandre Malavasi/source/repos/Building-Enterprise-Applications-With-DotNet-And-CSharp/Chapter21/BookingService/Client/Pages/BookingList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ0xpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alexandre Malavasi/source/repos/Building-Enterprise-Applications-With-DotNet-And-CSharp/Chapter21/BookingService/Client/Pages/ContainerTypeForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFpbmVyVHlwZUZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alexandre Malavasi/source/repos/Building-Enterprise-Applications-With-DotNet-And-CSharp/Chapter21/BookingService/Client/Pages/ContainerTypes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFpbmVyVHlwZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alexandre Malavasi/source/repos/Building-Enterprise-Applications-With-DotNet-And-CSharp/Chapter21/BookingService/Client/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alexandre Malavasi/source/repos/Building-Enterprise-Applications-With-DotNet-And-CSharp/Chapter21/BookingService/Client/Pages/Countries.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRyaWVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alexandre Malavasi/source/repos/Building-Enterprise-Applications-With-DotNet-And-CSharp/Chapter21/BookingService/Client/Pages/CountryForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRyeUZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alexandre Malavasi/source/repos/Building-Enterprise-Applications-With-DotNet-And-CSharp/Chapter21/BookingService/Client/Pages/CustomerForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJGb3JtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alexandre Malavasi/source/repos/Building-Enterprise-Applications-With-DotNet-And-CSharp/Chapter21/BookingService/Client/Pages/CustomerList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alexandre Malavasi/source/repos/Building-Enterprise-Applications-With-DotNet-And-CSharp/Chapter21/BookingService/Client/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alexandre Malavasi/source/repos/Building-Enterprise-Applications-With-DotNet-And-CSharp/Chapter21/BookingService/Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alexandre Malavasi/source/repos/Building-Enterprise-Applications-With-DotNet-And-CSharp/Chapter21/BookingService/Client/Pages/PortForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ydEZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alexandre Malavasi/source/repos/Building-Enterprise-Applications-With-DotNet-And-CSharp/Chapter21/BookingService/Client/Pages/PortList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ydExpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alexandre Malavasi/source/repos/Building-Enterprise-Applications-With-DotNet-And-CSharp/Chapter21/BookingService/Client/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alexandre Malavasi/source/repos/Building-Enterprise-Applications-With-DotNet-And-CSharp/Chapter21/BookingService/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alexandre Malavasi/source/repos/Building-Enterprise-Applications-With-DotNet-And-CSharp/Chapter21/BookingService/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-rbkl3111sm
+
+[C:/Users/Alexandre Malavasi/source/repos/Building-Enterprise-Applications-With-DotNet-And-CSharp/Chapter21/BookingService/Client/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-b8s14vs7bw

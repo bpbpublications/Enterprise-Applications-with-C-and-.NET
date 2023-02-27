@@ -1,0 +1,71 @@
+﻿@page "/ContainerTypeForm/{ContainertypeId?}"
+@using BookingService.Shared
+@using Newtonsoft.Json
+@using System.Net.Http.Headers
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+
+<PageTitle>Container Type Form</PageTitle>
+
+<h1>Container Type Form</h1>
+
+@if(containerType != null)
+{
+    
+        <Field>
+            <Validation Validator="ValidationRule.IsNotEmpty">
+            <TextEdit Placeholder="Name" @bind-Text="@containerType.Name" />
+            <Feedback>
+                <ValidationError>Enter valid name!</ValidationError>
+            </Feedback>
+            </Validation>
+        </Field>
+         <br />
+         <Button Color="Color.Primary" Clicked="@SaveAsync">Save</Button>
+
+    
+}
+
+
+@code {
+    private ContainerType containerType;
+
+    [Parameter]
+    public string ContainerTypeId { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if(ContainerTypeId != null)
+        {
+            var result = await Http.GetAsync("/ContainerType/Get?id=" + ContainerTypeId);
+            var stringResult = await result.Content.ReadAsStringAsync();
+            containerType = JsonConvert.DeserializeObject<ContainerType>(stringResult);  
+        }
+        else
+        {
+            containerType = new ContainerType();
+        }
+
+    }
+
+    protected async Task SaveAsync()
+    {
+        var myContent = JsonConvert.SerializeObject(containerType);
+        var buffer = System.Text.Encoding.UTF8.GetBytes(myContent);
+        var stringContent = new StringContent(myContent);
+
+
+        if(containerType.Id == 0)
+        {
+           await Http.PostAsJsonAsync("/ContainerType/Add", containerType); 
+        }
+        else
+        {
+           await Http.PostAsJsonAsync("/ContainerType/Edit", containerType); 
+        }
+
+        NavManager.NavigateTo("/containerTypes");
+
+    }
+}

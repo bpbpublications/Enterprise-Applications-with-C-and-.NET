@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "c84HDmd9RUnolcTbHpBWCJRATy1gkJlsk2B68f/PGtqUw820NOHZlK6WYfNdfWQTdTO3pWRnLHOjLi4lbHd+ow==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Alexandre Malavasi\\source\\repos\\Building-Enterprise-Applications-With-DotNet-And-CSharp\\Chapter19\\BPBBookChapter19\\BPBBookChapter19.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alexandre Malavasi\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Alexandre Malavasi\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Alexandre Malavasi\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\Alexandre Malavasi\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\Alexandre Malavasi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\Alexandre Malavasi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,11 @@
+﻿@inject IJSRuntime JsRuntime
+<h3>JavaScriptExample</h3>
+
+<button @onclick="JSTestClick">JSTest</button>
+
+@code {
+    async Task JSTestClick()
+    {
+        await JsRuntime.InvokeVoidAsync("alert", "Blazor interop");
+    }
+}

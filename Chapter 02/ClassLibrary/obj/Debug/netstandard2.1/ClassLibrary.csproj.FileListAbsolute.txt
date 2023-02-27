@@ -1,0 +1,10 @@
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ClassLibrary\bin\Debug\netstandard2.1\ClassLibrary.deps.json
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ClassLibrary\bin\Debug\netstandard2.1\ClassLibrary.dll
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ClassLibrary\bin\Debug\netstandard2.1\ClassLibrary.pdb
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ClassLibrary\obj\Debug\netstandard2.1\ClassLibrary.csproj.AssemblyReference.cache
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ClassLibrary\obj\Debug\netstandard2.1\ClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ClassLibrary\obj\Debug\netstandard2.1\ClassLibrary.AssemblyInfoInputs.cache
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ClassLibrary\obj\Debug\netstandard2.1\ClassLibrary.AssemblyInfo.cs
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ClassLibrary\obj\Debug\netstandard2.1\ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ClassLibrary\obj\Debug\netstandard2.1\ClassLibrary.dll
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ClassLibrary\obj\Debug\netstandard2.1\ClassLibrary.pdb

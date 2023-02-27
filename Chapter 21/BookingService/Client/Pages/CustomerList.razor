@@ -1,0 +1,63 @@
+﻿@page "/CustomerList"
+@using BookingService.Shared
+@using Newtonsoft.Json
+@inject HttpClient Http
+
+
+<PageTitle>Customer List</PageTitle>
+
+<h1>Customers</h1>
+<br />
+<div style="position:absolute">
+    <a href="/CustomerForm/" class="btn btn-primary">Mew Customer</a>
+</div>
+<br /><br />
+
+@if (customers == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Country</th>
+                <th>Flag</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var port in customers)
+            {
+                <tr>
+                    <td>@port.Name</td>
+                    <td>
+                        
+                        @port.Country.Name
+
+                    </td>
+                    <td>
+                          <span class="fi fi-@port.Country.Initials.ToLower()"></span>
+
+                    </td>
+                    <td>
+                        <a href="/CustomerForm/@port.Id">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Customer>? customers;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var result = await Http.GetAsync("/CustomerInfo/GetList");
+        var stringResult = await result.Content.ReadAsStringAsync();
+        customers = JsonConvert.DeserializeObject<List<Customer>>(stringResult);  
+    }
+}

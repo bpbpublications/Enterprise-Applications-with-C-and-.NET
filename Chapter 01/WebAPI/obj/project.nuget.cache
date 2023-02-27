@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "ky1d5wkqTyZtIm68gpCcG1GTM6q4Y03Veo0llQeN9jS6jv5JMc/fg1uCXr9TM7imkRR5tSa8qHij9UO6eUqRmg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Alexandre Malavasi\\source\\repos\\Building-Enterprise-Applications-With-DotNet-And-CSharp\\Chapter1\\WebAPI\\WebAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alexandre Malavasi\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.0-preview.5.22303.8\\microsoft.aspnetcore.openapi.7.0.0-preview.5.22303.8.nupkg.sha512",
+    "C:\\Users\\Alexandre Malavasi\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Alexandre Malavasi\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Alexandre Malavasi\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\Alexandre Malavasi\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\Alexandre Malavasi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\Alexandre Malavasi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

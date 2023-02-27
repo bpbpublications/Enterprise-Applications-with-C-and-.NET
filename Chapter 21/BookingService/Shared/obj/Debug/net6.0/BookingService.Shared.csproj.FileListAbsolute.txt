@@ -1,0 +1,12 @@
+C:\Users\Alexandre Malavasi\source\repos\BookingService\Shared\bin\Debug\net6.0\BookingService.Shared.deps.json
+C:\Users\Alexandre Malavasi\source\repos\BookingService\Shared\bin\Debug\net6.0\BookingService.Shared.dll
+C:\Users\Alexandre Malavasi\source\repos\BookingService\Shared\bin\Debug\net6.0\BookingService.Shared.pdb
+C:\Users\Alexandre Malavasi\source\repos\BookingService\Shared\obj\Debug\net6.0\BookingService.Shared.csproj.AssemblyReference.cache
+C:\Users\Alexandre Malavasi\source\repos\BookingService\Shared\obj\Debug\net6.0\BookingService.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alexandre Malavasi\source\repos\BookingService\Shared\obj\Debug\net6.0\BookingService.Shared.AssemblyInfoInputs.cache
+C:\Users\Alexandre Malavasi\source\repos\BookingService\Shared\obj\Debug\net6.0\BookingService.Shared.AssemblyInfo.cs
+C:\Users\Alexandre Malavasi\source\repos\BookingService\Shared\obj\Debug\net6.0\BookingService.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Alexandre Malavasi\source\repos\BookingService\Shared\obj\Debug\net6.0\BookingService.Shared.dll
+C:\Users\Alexandre Malavasi\source\repos\BookingService\Shared\obj\Debug\net6.0\refint\BookingService.Shared.dll
+C:\Users\Alexandre Malavasi\source\repos\BookingService\Shared\obj\Debug\net6.0\BookingService.Shared.pdb
+C:\Users\Alexandre Malavasi\source\repos\BookingService\Shared\obj\Debug\net6.0\ref\BookingService.Shared.dll

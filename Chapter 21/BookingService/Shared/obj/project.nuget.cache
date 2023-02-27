@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "AT9ShgW2oe7mALWCNoJc8CsfaAZKR0xjeVssZPTTvitd9BCkrRLbmka7jPQXp+ml+7K2eYq+JlfbU+8DUPaAAA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Alexandre Malavasi\\source\\repos\\BookingService\\Shared\\BookingService.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alexandre Malavasi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.5\\microsoft.aspnetcore.app.ref.6.0.5.nupkg.sha512",
+    "C:\\Users\\Alexandre Malavasi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.5\\microsoft.windowsdesktop.app.ref.6.0.5.nupkg.sha512",
+    "C:\\Users\\Alexandre Malavasi\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.5\\microsoft.netcore.app.ref.6.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}

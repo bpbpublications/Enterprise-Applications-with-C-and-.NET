@@ -1,0 +1,17 @@
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.exe
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.deps.json
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.runtimeconfig.json
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.runtimeconfig.dev.json
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.dll
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.pdb
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ConsoleApp\bin\Debug\netcoreapp3.1\ClassLibrary.dll
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ConsoleApp\bin\Debug\netcoreapp3.1\ClassLibrary.pdb
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.csproj.AssemblyReference.cache
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.AssemblyInfoInputs.cache
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.AssemblyInfo.cs
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.csproj.CopyComplete
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.dll
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.pdb
+C:\Users\Alexandre Malavasi\source\repos\Building-Enterprise-Applications-With-DotNet-And-CSharp\Chapter2\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.genruntimeconfig.cache

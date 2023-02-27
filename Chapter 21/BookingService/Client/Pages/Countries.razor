@@ -1,0 +1,63 @@
+﻿@page "/Countries"
+@using BookingService.Shared
+@using Newtonsoft.Json
+@inject HttpClient Http
+
+
+<PageTitle>Countries</PageTitle>
+
+<h1>Countries</h1>
+<br />
+<div style="position:absolute">
+    <a href="/CountryForm/" class="btn btn-primary">Mew Country</a>
+</div>
+<br /><br />
+
+@if (countriesList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Initials</th>
+                <th>Flag</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var country in countriesList)
+            {
+                <tr>
+                    <td>@country.Name</td>
+                    <td>
+                        
+                        @country.Initials
+
+                    </td>
+                    <td>
+                          <span class="fi fi-@country.Initials.ToLower()"></span>
+
+                    </td>
+                    <td>
+                        <a href="/CountryForm/@country.Id">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Country>? countriesList;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var result = await Http.GetAsync("/Country/GetList");
+        var stringResult = await result.Content.ReadAsStringAsync();
+        countriesList = JsonConvert.DeserializeObject<List<Country>>(stringResult);  
+    }
+}

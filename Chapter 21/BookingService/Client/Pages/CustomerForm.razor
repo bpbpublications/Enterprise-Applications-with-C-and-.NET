@@ -1,0 +1,98 @@
+﻿@page "/CustomerForm/{CustomerId?}"
+@using BookingService.Shared
+@using Newtonsoft.Json
+@using System.Net.Http.Headers
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+
+<PageTitle>Customer Form</PageTitle>
+
+<h1>Customer Form </h1>
+
+@if(customer != null)
+{
+    
+        <Field>
+            <Validation Validator="ValidationRule.IsNotEmpty">
+            <TextEdit Placeholder="Name" @bind-Text="@customer.Name" />
+            <Feedback>
+                <ValidationError>Enter valid name!</ValidationError>
+            </Feedback>
+            </Validation>
+        </Field>
+        <Field>
+            <Validation Validator="ValidationRule.IsNotEmpty">
+            <TextEdit Placeholder="Name" @bind-Text="@customer.Address" />
+            <Feedback>
+                <ValidationError>Enter valid address!</ValidationError>
+            </Feedback>
+            </Validation>
+        </Field>
+        <Field>
+             <Select @bind-SelectedValue="@customer.CountryId">
+                  <SelectItem Value="0">--Select a country</SelectItem>
+            @foreach(var country in countries)
+            {
+                 <SelectItem Value="@country.Id">@country.Name</SelectItem>
+                
+          
+            }
+              </Select>
+           
+        </Field>
+        <Field>
+            <TextEdit Placeholder="Notes" @bind-Text="@customer.Notes" Plaintext="false" />
+        </Field>
+        <Field>
+            <Switch TValue="bool" @bind-Checked="@customer.Active" >Active</Switch>
+        </Field>
+         <Button Color="Color.Primary" Clicked="@SaveAsync">Save</Button>
+
+    
+}
+
+
+@code {
+    private Customer customer;
+    private List<Country> countries;
+
+    [Parameter]
+    public string CustomerId { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var result = await Http.GetAsync("/Country/GetList");
+        var stringResult = await result.Content.ReadAsStringAsync();
+        countries = JsonConvert.DeserializeObject<List<Country>>(stringResult);  
+
+        if(CustomerId != null)
+        {
+            result = await Http.GetAsync("/CustomerInfo/Get?id=" + CustomerId);
+            stringResult = await result.Content.ReadAsStringAsync();
+            customer = JsonConvert.DeserializeObject<Customer>(stringResult);  
+        }
+        else
+        {
+            customer = new Customer();
+        }
+
+    }
+
+    protected async Task SaveAsync()
+    {
+        customer.Country = countries.FirstOrDefault(x => x.Id == customer.CountryId);
+
+        if(customer.Id == 0)
+        {
+           await Http.PostAsJsonAsync("/CustomerInfo/Add", customer); 
+        }
+        else
+        {
+           await Http.PostAsJsonAsync("/CustomerInfo/Edit", customer); 
+        }
+
+        NavManager.NavigateTo("/customerList");
+
+    }
+}

@@ -1,0 +1,55 @@
+﻿@page "/Containertypes"
+@using BookingService.Shared
+@using Newtonsoft.Json
+@inject HttpClient Http
+
+
+<PageTitle>Container Types</PageTitle>
+
+<h1>Container Types</h1>
+<br />
+<div style="position:absolute">
+    <a href="/ContainerTypeForm/" class="btn btn-primary">Mew Container Type</a>
+</div>
+<br /><br />
+
+@if (containerTypesList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var containerType in containerTypesList)
+            {
+                <tr>
+                    <td>@containerType.Name</td>
+                   
+                    <td>
+                        <a href="/ContainerTypeForm/@containerType.Id">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<ContainerType>? containerTypesList;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var result = await Http.GetAsync("/Containertype/GetList");
+        var stringResult = await result.Content.ReadAsStringAsync();
+        containerTypesList = JsonConvert.DeserializeObject<List<ContainerType>>(stringResult);  
+    }
+}
+

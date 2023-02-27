@@ -1,0 +1,134 @@
+﻿@page "/BookingForm/{BookingId?}"
+@using BookingService.Shared
+@using Newtonsoft.Json
+@using System.Net.Http.Headers
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+
+<PageTitle>Booking Form</PageTitle>
+
+<h1>Booking Form</h1>
+
+@if(bookingRecord != null)
+{
+        <Field>
+             <Select @bind-SelectedValue="@bookingRecord.CustomerId">
+                  <SelectItem Value="0">--Select a Customer</SelectItem>
+            @foreach(var customer in customers)
+            {
+                 <SelectItem Value="@customer.Id">@customer.Name</SelectItem>
+                
+          
+            }
+              </Select>
+           
+        </Field>
+         <Field>
+             <Select @bind-SelectedValue="@bookingRecord.ContainerTypeId">
+                  <SelectItem Value="0">--Select a Container Type</SelectItem>
+            @foreach(var containerType in containerTypes)
+            {
+                 <SelectItem Value="@containerType.Id">@containerType.Name</SelectItem>
+                
+          
+            }
+              </Select>
+           
+        </Field>
+        <Field>
+           
+            <DateEdit TValue="DateTime" @bind-Date="@bookingRecord.EmbarkDate" Placeholder="Embark Date" />
+        </Field>
+        <Field>
+            <DateEdit TValue="DateTime" @bind-Date="@bookingRecord.ArrivalDate" Placeholder="Arrival Date" />
+        </Field>
+        <Field>
+             <Select @bind-SelectedValue="@bookingRecord.PortOriginId">
+                  <SelectItem Value="0">--Select a Port Origin</SelectItem>
+            @foreach(var port in ports)
+            {
+                 <SelectItem Value="@port.Id">@port.Name</SelectItem>
+                
+          
+            }
+              </Select>
+           
+        </Field>
+        <Field>
+             <Select @bind-SelectedValue="@bookingRecord.PortDestinyId">
+                  <SelectItem Value="0">--Select a Port Destiny</SelectItem>
+            @foreach(var port in ports)
+            {
+                 <SelectItem Value="@port.Id">@port.Name</SelectItem>
+                
+          
+            }
+              </Select>
+           
+        </Field>
+        
+         <br />
+         <Button Color="Color.Primary" Clicked="@SaveAsync">Save</Button>
+    
+}
+
+
+@code {
+    private Booking bookingRecord;
+    private List<Port> ports;
+    private List<ContainerType> containerTypes;
+    private List<Customer> customers;
+
+    [Parameter]
+    public string BookingId { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var result = await Http.GetAsync("/PortInfo/GetList");
+        var stringResult = await result.Content.ReadAsStringAsync();
+        ports = JsonConvert.DeserializeObject<List<Port>>(stringResult);  
+
+        result = await Http.GetAsync("/ContainerType/GetList");
+        stringResult = await result.Content.ReadAsStringAsync();
+        containerTypes = JsonConvert.DeserializeObject<List<ContainerType>>(stringResult); 
+
+        result = await Http.GetAsync("/CustomerInfo/GetList");
+        stringResult = await result.Content.ReadAsStringAsync();
+        customers = JsonConvert.DeserializeObject<List<Customer>>(stringResult); 
+
+        if(BookingId != null)
+        {
+            result = await Http.GetAsync("/BookingInfo/Get?id=" + BookingId);
+            stringResult = await result.Content.ReadAsStringAsync();
+            bookingRecord = JsonConvert.DeserializeObject<Booking>(stringResult);  
+        }
+        else
+        {
+            bookingRecord = new Booking();
+        }
+
+    }
+
+    protected async Task SaveAsync()
+    {
+        bookingRecord.Customer = customers.FirstOrDefault(x => x.Id == bookingRecord.CustomerId);
+        bookingRecord.ContainerType = containerTypes.FirstOrDefault(x=> x.Id == bookingRecord.ContainerTypeId);
+        bookingRecord.PortOrigin = ports.FirstOrDefault(x => x.Id == bookingRecord.PortOriginId);
+        bookingRecord.PortDestiny = ports.FirstOrDefault(x => x.Id == bookingRecord.PortDestinyId);
+
+
+
+        if(bookingRecord.Id == 0)
+        {
+           await Http.PostAsJsonAsync("/BookingInfo/Add", bookingRecord); 
+        }
+        else
+        {
+           await Http.PostAsJsonAsync("/BookingInfo/Edit", bookingRecord); 
+        }
+
+        NavManager.NavigateTo("/bookingList");
+
+    }
+}

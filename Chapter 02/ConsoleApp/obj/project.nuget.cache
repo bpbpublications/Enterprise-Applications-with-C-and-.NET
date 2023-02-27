@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/BC7ycNtPmFB/K1gfcFuEhWPLVG4K33gpBH2LSf/w8cRP9F1H+ciUfh8KaAb2+Tcp5bDMNn5yUNENKrdJ0jjIw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Alexandre Malavasi\\source\\repos\\Building-Enterprise-Applications-With-DotNet-And-CSharp\\Chapter2\\ConsoleApp\\ConsoleApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alexandre Malavasi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,87 @@
+﻿@page "/PortForm/{PortId?}"
+@using BookingService.Shared
+@using Newtonsoft.Json
+@using System.Net.Http.Headers
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+
+<PageTitle>Port Form</PageTitle>
+
+<h1>Port Form </h1>
+
+@if(port != null)
+{
+    
+        <Field>
+            <Validation Validator="ValidationRule.IsNotEmpty">
+            <TextEdit Placeholder="Name" @bind-Text="@port.Name" />
+            <Feedback>
+                <ValidationError>Enter valid name!</ValidationError>
+            </Feedback>
+            </Validation>
+        </Field>
+        <br />
+        <Field>
+             <Select @bind-SelectedValue="@port.CountryId">
+                  <SelectItem Value="0">--Select a country</SelectItem>
+            @foreach(var country in countries)
+            {
+                 <SelectItem Value="@country.Id">@country.Name</SelectItem>
+                
+          
+            }
+              </Select>
+           
+        </Field>
+        
+        <br />
+         <Button Color="Color.Primary" Clicked="@SaveAsync">Save</Button>
+
+    
+}
+
+
+@code {
+    private Port port;
+    private List<Country> countries;
+
+    [Parameter]
+    public string PortId { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var result = await Http.GetAsync("/Country/GetList");
+        var stringResult = await result.Content.ReadAsStringAsync();
+        countries = JsonConvert.DeserializeObject<List<Country>>(stringResult);  
+
+        if(PortId != null)
+        {
+            result = await Http.GetAsync("/PortInfo/Get?id=" + PortId);
+            stringResult = await result.Content.ReadAsStringAsync();
+            port = JsonConvert.DeserializeObject<Port>(stringResult);  
+        }
+        else
+        {
+            port = new Port();
+        }
+
+    }
+
+    protected async Task SaveAsync()
+    {
+        port.Country = countries.FirstOrDefault(x => x.Id == port.CountryId);
+
+        if(port.Id == 0)
+        {
+           await Http.PostAsJsonAsync("/PortInfo/Add", port); 
+        }
+        else
+        {
+           await Http.PostAsJsonAsync("/PortInfo/Edit", port); 
+        }
+
+        NavManager.NavigateTo("/portList");
+
+    }
+}

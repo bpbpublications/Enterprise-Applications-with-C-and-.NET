@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPBBookLogging", "BPBBookLogging.csproj", "{B4730B9B-5D46-476A-9355-55B0F6DA91BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4730B9B-5D46-476A-9355-55B0F6DA91BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4730B9B-5D46-476A-9355-55B0F6DA91BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4730B9B-5D46-476A-9355-55B0F6DA91BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4730B9B-5D46-476A-9355-55B0F6DA91BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F3B7E1AA-1F7B-4641-AD52-CD1148B9BD32}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,79 @@
+﻿@page "/CountryForm/{CountryId?}"
+@using BookingService.Shared
+@using Newtonsoft.Json
+@using System.Net.Http.Headers
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+
+<PageTitle>Country Form</PageTitle>
+
+<h1>Country Form</h1>
+
+@if(country != null)
+{
+    
+        <Field>
+            <Validation Validator="ValidationRule.IsNotEmpty">
+            <TextEdit Placeholder="Name" @bind-Text="@country.Name" />
+            <Feedback>
+                <ValidationError>Enter valid name!</ValidationError>
+            </Feedback>
+            </Validation>
+        </Field>
+         <Field>
+            <Validation Validator="ValidationRule.IsNotEmpty">
+            <TextEdit Placeholder="Initials" @bind-Text="@country.Initials" />
+            <Feedback>
+                <ValidationError>Enter valid initials!</ValidationError>
+            </Feedback>
+            </Validation>
+         </Field>
+         <br />
+         <Button Color="Color.Primary" Clicked="@SaveAsync">Save</Button>
+
+    
+}
+
+
+@code {
+    private Country country;
+
+    [Parameter]
+    public string CountryId { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if(CountryId != null)
+        {
+            var result = await Http.GetAsync("/Country/Get?id=" + CountryId);
+            var stringResult = await result.Content.ReadAsStringAsync();
+            country = JsonConvert.DeserializeObject<Country>(stringResult);  
+        }
+        else
+        {
+            country = new Country();
+        }
+
+    }
+
+    protected async Task SaveAsync()
+    {
+        var myContent = JsonConvert.SerializeObject(country);
+        var buffer = System.Text.Encoding.UTF8.GetBytes(myContent);
+        var stringContent = new StringContent(myContent);
+
+
+        if(country.Id == 0)
+        {
+           await Http.PostAsJsonAsync("/Country/Add", country); 
+        }
+        else
+        {
+           await Http.PostAsJsonAsync("/Country/Edit", country); 
+        }
+
+        NavManager.NavigateTo("/countries");
+
+    }
+}
